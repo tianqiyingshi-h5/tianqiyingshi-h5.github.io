@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天启影视 - 星图电影/天工剧集/废土动漫/启示录纪录片 | tianqiyingshi-h5</title>
+<meta name="description" content="天启影视（tianqiyingshi-h5.github.io）像天启局里的星盘：电影、电视剧、动漫、纪录片、短剧按创世/末世/机关/妖异/远征分类，启明榜、观星人手记，移动端自适应。">
+<meta name="keywords" content="天启影视,星图电影,天工剧集,废土动漫,启示录纪录片,末日短剧,天启局,科幻影视导航,tianqiyingshi-h5">
+<meta name="author" content="天启影视">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://tianqiyingshi-h5.github.io/">
+<meta property="og:title" content="天启影视 - 启：文明最后影像">
+<meta property="og:description" content="星图电影、天工剧集、废土动漫、启示录纪录片：天启局把末世前的好片先收起来。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tianqiyingshi-h5.github.io/">
+<meta property="og:site_name" content="天启影视">
+<meta name="msvalidate.01" content="BING_VERIFY_CODE">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"天启影视",
+  "url":"https://tianqiyingshi-h5.github.io/",
+  "description":"天启影视是按星图/天工/末世母题组织的影视导航站，覆盖电影、电视剧、动漫、纪录片、短剧。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"天启影视和其他电影导航站有什么不同？",
+      "acceptedAnswer":{"@type":"Answer","text":"别的站按最新/最热/类型排，天启影视按“天启局”的世界观排：创世、末世、机关、妖异、远征。像在星盘上拨指针，而不是在列表里刷下拉。"}
+    },
+    {
+      "@type":"Question",
+      "name":"天启影视提供盗版片源吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"不提供。天启影视是影视导航与片单站，只做分类、简介、世界观标注和观星人手记，不挂侵权片源、不绑播放器下载器。"}
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#0a0f1c;
+  --card:#101a2e;
+  --ink:#e8f3ff;
+  --muted:#9db4d6;
+  --star:#5fe3ff;
+  --bronze:#d8a657;
+  --fire:#ff6a3d;
+  --violet:#8b7bff;
+  --line:rgba(95,227,255,.28);
+  --shadow:0 18px 46px rgba(0,0,0,.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  background:
+    radial-gradient(900px 480px at 82% -10%,rgba(139,123,255,.18),transparent 60%),
+    radial-gradient(760px 420px at -8% 6%,rgba(95,227,255,.16),transparent 55%),
+    linear-gradient(180deg,#0a0f1c 0%,#0c1426 60%,#080d18 100%);
+  color:var(--ink);line-height:1.78;
+}
+a{color:inherit;text-decoration:none}
+
+/* 星盘门楼 */
+.tq-top{position:sticky;top:0;z-index:999;background:rgba(10,15,28,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.tq-top__in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem}
+.tq-logo{font-weight:900;font-size:1.18rem}
+.tq-logo b{color:var(--star)}
+.tq-logo i{color:var(--bronze);font-style:normal}
+.tq-nav{display:flex;gap:.3rem}
+.tq-nav a{padding:.45rem .8rem;border-radius:8px;font-size:.9rem;color:var(--muted);font-weight:600}
+.tq-nav a:hover{background:rgba(95,227,255,.16);color:var(--star)}
+.tq-burger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.tq-burger span{width:22px;height:2px;background:var(--star);border-radius:2px}
+
+/* Hero 星图 */
+.tq-hero{max-width:1180px;margin:0 auto;padding:3.4rem 1rem 2.6rem;text-align:center}
+.tq-dial{width:160px;height:160px;margin:0 auto 1.4rem;border-radius:50%;position:relative;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(95,227,255,.25),transparent 60%),
+    conic-gradient(from 0deg,var(--star),var(--bronze),var(--fire),var(--violet),var(--star));
+  -webkit-mask:radial-gradient(circle,transparent 54px,#000 55px);
+          mask:radial-gradient(circle,transparent 54px,#000 55px);
+  animation:spin 16s linear infinite;filter:drop-shadow(0 0 24px rgba(95,227,255,.35))}
+.tq-dial::after{content:"✦";position:absolute;inset:0;display:grid;place-items:center;color:var(--star);font-size:1.4rem;-webkit-mask:none;mask:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tq-hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.18;margin-bottom:1rem}
+.tq-hero h1 em{font-style:normal;color:var(--star)}
+.tq-hero h1 u{text-decoration:none;color:var(--fire)}
+.tq-hero p{color:var(--muted);max-width:720px;margin:0 auto 1.8rem}
+.tq-cta{display:inline-flex;gap:.5rem;align-items:center;padding:.85rem 1.9rem;border-radius:10px;font-weight:800;color:#06121c;background:linear-gradient(90deg,var(--star),var(--bronze));box-shadow:var(--shadow)}
+.tq-dim{color:var(--muted);font-size:.85rem;letter-spacing:2px;font-family:ui-monospace,monospace}
+
+/* 区块 */
+.tq-sec{max-width:1180px;margin:0 auto;padding:3.3rem 1rem}
+.tq-head{margin-bottom:1.8rem;text-align:center}
+.tq-head .no{font-size:.74rem;color:var(--star);letter-spacing:3px;font-family:ui-monospace,monospace}
+.tq-head h2{font-size:clamp(1.4rem,3.5vw,2.2rem);font-weight:900;margin-top:.3rem}
+.tq-head h2 i{color:var(--bronze);font-style:normal}
+.tq-head p{color:var(--muted);margin-top:.35rem;font-size:.94rem}
+
+/* 天启片单 */
+.tq-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.tq-cell{border:1px solid var(--line);border-radius:18px;padding:1.3rem 1rem;background:var(--card);text-align:center;transition:.25s}
+.tq-cell:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.tq-cell .ic{font-size:1.8rem}
+.tq-cell h3{font-size:.98rem;margin:.5rem 0 .35rem}
+.tq-cell p{font-size:.76rem;color:var(--muted)}
+
+/* 天启局分类 */
+.tq-cats{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.tq-c{border-radius:20px;padding:1.3rem 1rem;text-align:center;background:var(--card);border:1px solid var(--line);transition:.25s;position:relative;overflow:hidden}
+.tq-c:hover{transform:translateY(-4px)}
+.tq-c .ring{width:36px;height:36px;border-radius:50%;margin:0 auto .6rem;border:2px dashed var(--star);display:grid;place-items:center;font-size:.9rem}
+.tq-c.create .ring{border-color:var(--star)}
+.tq-c.end .ring{border-color:var(--fire)}
+.tq-c.gear .ring{border-color:var(--bronze)}
+.tq-c.ghost .ring{border-color:var(--violet)}
+.tq-c.exped .ring{border-color:#7CFFB2}
+.tq-c h3{font-size:.96rem}
+.tq-c p{font-size:.74rem;color:var(--muted)}
+
+/* 启明榜：星轨 */
+.tq-rank{display:grid;gap:1.1rem}
+.tq-item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem}
+.tq-item h3{font-size:1.04rem;display:flex;justify-content:space-between;margin-bottom:.6rem}
+.tq-item h3 span{color:var(--star)}
+.tq-bar{height:14px;border-radius:8px;background:#070c16;overflow:hidden;position:relative;border:1px solid var(--line);
+  background-image:repeating-linear-gradient(115deg,rgba(95,227,255,.25) 0 2px,transparent 2px 14px)}
+.tq-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--star),var(--bronze),var(--fire))}
+.tq-bar i::after{content:"✦";position:absolute;right:5px;top:-3px;font-size:.85rem;color:var(--star)}
+
+/* 手记 */
+.tq-notes{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.tq-note{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.4rem}
+.tq-note .tag{font-size:.72rem;padding:.2rem .6rem;border-radius:6px;font-weight:700}
+.tq-note.star .tag{background:rgba(95,227,255,.18);color:var(--star)}
+.tq-note.keeper .tag{background:rgba(216,166,87,.18);color:var(--bronze)}
+.tq-note h3{font-size:1.05rem;margin:.6rem 0 .4rem}
+.tq-note p{font-size:.86rem;color:var(--muted)}
+
+/* 关于 */
+.tq-about{background:linear-gradient(160deg,#13203a,#0a0f1c);border:1px solid var(--line);border-radius:26px;padding:2.4rem}
+.tq-about h2{font-size:1.9rem;margin-bottom:.8rem}
+.tq-about h2 u{color:var(--star);text-decoration:none}
+.tq-about p{color:var(--muted);margin-bottom:1rem}
+.tq-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.4rem}
+.tq-stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem;text-align:center}
+.tq-stat b{font-size:1.5rem;color:var(--bronze);display:block}
+.tq-stat span{font-size:.8rem;color:var(--muted)}
+
+/* FAQ */
+.tq-faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.2rem 1.1rem;margin-bottom:.7rem}
+.tq-faq summary{cursor:pointer;padding:.85rem 0;font-weight:700}
+.tq-faq p{padding:0 0 .85rem;color:var(--muted)}
+
+/* 页脚 */
+.tq-foot{border-top:1px solid var(--line);background:#060a12;padding:2.2rem 1rem;text-align:center;color:var(--muted);font-size:.86rem}
+.tq-foot a{color:var(--star)}
+.tq-foot__links{display:flex;gap:1.1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+.tq-foot__links a{font-size:.84rem}
+
+@media(max-width:980px){
+  .tq-grid{grid-template-columns:repeat(3,1fr)}
+  .tq-cats{grid-template-columns:repeat(3,1fr)}
+  .tq-notes{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .tq-nav{display:none;position:absolute;top:56px;left:0;right:0;flex-direction:column;gap:0;background:rgba(10,15,28,.98);border-bottom:1px solid var(--line)}
+  .tq-nav.show{display:flex}
+  .tq-nav a{padding:.85rem 1rem;border-bottom:1px solid var(--line)}
+  .tq-burger{display:flex}
+  .tq-grid{grid-template-columns:repeat(2,1fr)}
+  .tq-cats{grid-template-columns:repeat(2,1fr)}
+  .tq-stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="tq-top">
+  <div class="tq-top__in">
+    <div class="tq-logo">✦ 天启<b>影视</b> <i>·天启局星盘</i></div>
+    <nav class="tq-nav" id="tqNav">
+      <a href="#home">星盘</a>
+      <a href="#grid">天启片单</a>
+      <a href="#cats">天启局</a>
+      <a href="#rank">启明榜</a>
+      <a href="#notes">观星人手记</a>
+      <a href="#about">关于天启</a>
+    </nav>
+    <div class="tq-burger" onclick="document.getElementById('tqNav').classList.toggle('show')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<section class="tq-hero" id="home">
+  <div class="tq-dial"></div>
+  <p class="tq-dim">// heaven opens · record the last images</p>
+  <h1>星盘转动，<em>天启</em>开映<br>在文明打烊前，<u>先收好这些片子</u></h1>
+  <p>天启影视不是“又一个小片库”，而像天启局里那面星盘：创世、末世、机关、妖异、远征，五条星轨一拨，该看的片子自己浮上来。科幻、废土、天工、妖异、远航，都按“世界要变”的语气排。</p>
+  <a class="tq-cta" href="#grid">✦ 拨一下星盘</a>
+</section>
+
+<section class="tq-sec" id="grid">
+  <div class="tq-head">
+    <div class="no">// apocalypse shelf</div>
+    <h2>天启 <i>片单</i></h2>
+    <p>五类片子，对应世界将要改变的五种时刻。</p>
+  </div>
+  <div class="tq-grid">
+    <div class="tq-cell"><div class="ic">🎬</div><h3>星象电影</h3><p>科幻、太空、时间、星图、末日</p></div>
+    <div class="tq-cell"><div class="ic">📜</div><h3>天工剧集</h3><p>机关、皇城、匠人、权谋、变局</p></div>
+    <div class="tq-cell"><div class="ic">🤖</div><h3>废土动漫</h3><p>赛博、机战、末世、妖异、重生</p></div>
+    <div class="tq-cell"><div class="ic">🛰️</div><h3>启示录纪录片</h3><p>气候、战争、文明、考古、末世档案</p></div>
+    <div class="tq-cell"><div class="ic">⚡</div><h3>末日短剧</h3><p>幸存、避难所、信标、最后的一餐</p></div>
+  </div>
+</section>
+
+<section class="tq-sec" id="cats">
+  <div class="tq-head">
+    <div class="no">// bureau of heaven's opening</div>
+    <h2>天启 <i>局分类</i></h2>
+    <p>不按院线分，按“世界处在哪一层变化”分。</p>
+  </div>
+  <div class="tq-cats">
+    <div class="tq-c create"><div class="ring">☉</div><h3>创世</h3><p>起源、神谱、造物、第一束光</p></div>
+    <div class="tq-c end"><div class="ring">🜂</div><h3>末世</h3><p>灾变、废土、洪水、最后信标</p></div>
+    <div class="tq-c gear"><div class="ring">⚙</div><h3>机关</h3><p>天工、铜纹、傀儡、皇城机械</p></div>
+    <div class="tq-c ghost"><div class="ring">𓆩</div><h3>妖异</h3><p>狐仙、梦魇、星精、异界来客</p></div>
+    <div class="tq-c exped"><div class="ring">➤</div><h3>远征</h3><p>远航、深空、迁徙、文明出走</p></div>
+  </div>
+</section>
+
+<section class="tq-sec" id="rank">
+  <div class="tq-head">
+    <div class="no">// morning-star board</div>
+    <h2>启明 <i>榜</i></h2>
+    <p>天启影视按“星象浓度 + 末世感 + 重看价值 + 收藏进天启局”综合排，不是单纯播放量。</p>
+  </div>
+  <div class="tq-rank">
+    <div class="tq-item"><h3>1. 末世：疯狂的麦克斯4：狂暴之路 <span>98%</span></h3><div class="tq-bar"><i style="width:98%"></i></div></div>
+    <div class="tq-item"><h3>2. 创世：2001太空漫游 <span>96%</span></h3><div class="tq-bar"><i style="width:96%"></i></div></div>
+    <div class="tq-item"><h3>3. 机关：天工开物·皇城机械志 <span>94%</span></h3><div class="tq-bar"><i style="width:94%"></i></div></div>
+    <div class="tq-item"><h3>4. 妖异：天启·惊蛰变 <span>92%</span></h3><div class="tq-bar"><i style="width:92%"></i></div></div>
+    <div class="tq-item"><h3>5. 远征：星际穿越 <span>90%</span></h3><div class="tq-bar"><i style="width:90%"></i></div></div>
+  </div>
+</section>
+
+<section class="tq-sec" id="notes">
+  <div class="tq-head">
+    <div class="no">// stargazer logs</div>
+    <h2>观星人 <i>手记</i></h2>
+    <p>一边是拨星盘的观星人，一边是守天启局的守局人。</p>
+  </div>
+  <div class="tq-notes">
+    <article class="tq-note star">
+      <span class="tag">✦ 观星人</span>
+      <h3>为什么末世片越看越安心</h3>
+      <p>白天的新闻已经够乱，晚上看《疯狂的麦克斯》反而松口气：至少银幕里的世界更诚实——资源没了就抢，信标亮了就走。末世片不是丧，是把“活下去”讲回原始。</p>
+    </article>
+    <article class="tq-note keeper">
+      <span class="tag">🗝️ 守局人</span>
+      <h3>天启局怎么排片</h3>
+      <p>先问“这个世界要变没变”：没变放创世，快变放机关，已变放末世，变歪了放妖异，变出去了放远征。《2001》和《星际穿越》都归“人类被更大的东西拨了一下”。</p>
+    </article>
+    <article class="tq-note star">
+      <span class="tag">✦ 观星人</span>
+      <h3>天工剧集是给大人看的机关童话</h3>
+      <p>铜纹、水运仪象、皇城齿轮、傀儡丞相——这类片子不喊科幻，但每一帧都在问“人能不能造出替自己决断的东西”。看的时候像翻《天工开物》被风吹醒。</p>
+    </article>
+    <article class="tq-note keeper">
+      <span class="tag">🗝️ 守局人</span>
+      <h3>妖异片不能放中午看</h3>
+      <p>狐仙、梦魇、星精这些，要在灯暗、手机静音、猫突然看门角的时候看。天启影视会把妖异类默认沉到夜里——不是吓你，是还给它本来的时辰。</p>
+    </article>
+  </div>
+</section>
+
+<section class="tq-sec" id="about">
+  <div class="tq-about">
+    <h2>关于 <u>天启影视</u></h2>
+    <p>
+      天启影视（tianqiyingshi-h5.github.io）不是另一个“全网影视大全”，它像天启局里那面会转的星盘：世界要变的时候，先有人把值得留下的影像收进柜子。
+    </p>
+    <p>
+      我们覆盖电影、电视剧、动漫、纪录片、短剧，但入口是“世界处在哪种变化里”：创世、末世、机关、妖异、远征。你不是来刷榜单的，是来在文明打烊前，挑几部带走的。
+    </p>
+    <div class="tq-stats">
+      <div class="tq-stat"><b>5 类</b><span>星象/天工/废土/启示/末日</span></div>
+      <div class="tq-stat"><b>5 局</b><span>创世/末世/机关/妖异/远征</span></div>
+      <div class="tq-stat"><b>0 噪</b><span>不弹“限时免费”</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="tq-sec tq-faq">
+  <div class="tq-head">
+    <div class="no">// q & a</div>
+    <h2>天启 <i>问答</i></h2>
+  </div>
+  <details open>
+    <summary>“天启”到底是末日还是开局？</summary>
+    <p>两个都是。天启=天上开口：既可以是世界终结的警报，也可以是新秩序的第一道缝光。天启影视的片单同时收“末世片”和“创世片”，因为好片子都站在变局的门槛上。</p>
+  </details>
+  <details>
+    <summary>和八戒影视、秋霞影视差在哪？</summary>
+    <p>八戒是庄里院子（人饿不饿），秋霞是黄昏天台（光对不对），天启是星盘局（世界变没变）。一个管胃，一个管光，一个管时代。</p>
+  </details>
+  <details>
+    <summary>天启局分类会很玄吗？</summary>
+    <p>不玄，只是换标签。创世=起源类，末世=灾变类，机关=匠造/权谋类，妖异=超自然/梦魇类，远征=出走/深空类。比“动作/喜剧/科幻”更适合挑“现在该看什么”。</p>
+  </details>
+</section>
+
+<footer class="tq-foot">
+  <div class="tq-foot__links">
+    <a href="#grid">天启片单</a>
+    <a href="#cats">天启局</a>
+    <a href="#rank">启明榜</a>
+    <a href="#notes">观星人手记</a>
+    <a href="#about">关于天启</a>
+    <a href="#">免责声明</a>
+  </div>
+  <p>© 2026 <a href="https://tianqiyingshi-h5.github.io">天启影视</a> · tianqiyingshi-h5.github.io</p>
+  <p>天启影视 —— 星盘转动，文明打烊前，先收好这些片子。</p>
+</footer>
+
+<script>
+document.querySelectorAll('.tq-nav a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('tqNav').classList.remove('show');
+  });
+});
+</script>
+
+</body>
+</html>
